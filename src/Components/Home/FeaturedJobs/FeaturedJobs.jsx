@@ -6,7 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 const FeaturedJobs = ({ eachFeaturedJob }) => {
-  let { Id, company_logo, company_name, employment_type, job_location, job_position, job_type, salary } = eachFeaturedJob;
+  let { id, company_logo, company_name, employment_type, job_location, job_position, job_type, salary } = eachFeaturedJob;
+  console.log('clicked id', id);
+
 
   // let navigate = useNavigate();
   // let handleNavigate = (id) => {
@@ -28,7 +30,7 @@ const FeaturedJobs = ({ eachFeaturedJob }) => {
           </Card.Text>
 
 
-          <Link to={`/jobDetails/${Id}`}> <Button
+          <Link to={`/jobDetails/${id}`}> <Button
             variant="primary">
             Show Details
           </Button></Link>

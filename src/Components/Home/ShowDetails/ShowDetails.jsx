@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './ShowDetails.css';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const ShowDetails = () => {
+  let { id } = useParams();
   let [featuredJobs, setFeaturedJobs] = useState([]);
 
   useEffect(() => {
     let featuredJobLoader = async () => {
-      let loadJobs = await fetch('FeaturedJobs.json');
+      let loadJobs = await fetch('/FeaturedJobs.json');
       let newFeaturedJobs = await loadJobs.json();
-
       // update the useState with the fetched featuredJobs
       setFeaturedJobs(newFeaturedJobs);
     }
     featuredJobLoader();
   }, [])
-  console.log(featuredJobs);
+  console.log("All Jobs", featuredJobs);
+  console.log('Dynamically Passed Id', id);
 
   return (
     <div>
