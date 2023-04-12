@@ -13,6 +13,8 @@ import AppliedJobs from './Components/Home/AppliedJobs/AppliedJobs';
 import Home from './Components/Home/Home/Home';
 import Default from './Components/Home/Default/Default';
 import Blog from './Components/Home/Blog/Blog';
+import ShowDetails from './Components/Home/ShowDetails/ShowDetails';
+import NotFound from './Components/Home/NotFound/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,15 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/showDetails/:showId",
+        element: <ShowDetails></ShowDetails>,
+        loader: ({ params }) => fetch(`FeaturedJobs.json =${params.showId}`)
+      },
+      {
+        path: '*',
+        element: <NotFound></NotFound>
       }
 
     ]

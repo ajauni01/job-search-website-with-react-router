@@ -6,6 +6,7 @@ import ShowJobCategory from '../ShowJobCategory/ShowJobCategory';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import ShowDetails from '../ShowDetails/ShowDetails';
 
 const Default = () => {
   // useState and useEffect for the job category section
@@ -37,6 +38,12 @@ const Default = () => {
     featuredJobs = featuredJobs.slice(0, 4);
   }
 
+  // function to handle show job details
+  // // function to handle show job details
+  // // function to handle show job details
+  // let showJobDetails = (eachFeaturedJob) => {
+  //   console.log(eachFeaturedJob);
+  // }
 
   return (
     <div className='default-parent-container'>
@@ -72,7 +79,7 @@ const Default = () => {
 
         <div>
           {
-            jobCategory.map(eachJobCategory => <ShowJobCategory jobCategory={eachJobCategory} key={eachJobCategory.id}></ShowJobCategory>)
+            jobCategory.map(eachJobCategory => <ShowJobCategory jobCategory={eachJobCategory} key={eachJobCategory.id} ></ShowJobCategory>)
           }
         </div>
         {/* job-category-div-ends */}
