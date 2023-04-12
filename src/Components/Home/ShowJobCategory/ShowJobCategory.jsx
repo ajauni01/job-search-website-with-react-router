@@ -4,26 +4,19 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 
-
 const ShowJobCategory = ({ jobCategory }) => {
-  console.log(jobCategory);
-
-
   let { logo, title, available_jobs } = jobCategory;
-  console.log(available_jobs);
-
-
 
   return (
 
-    <div className='d-inline-flex p-2'>
+    <div className='d-inline-flex p-2 mb-5'>
       <Card className='card-properties'>
         <Card.Img variant="top" src={logo} />
         <Card.Body>
           <Card.Title><h2>{title}</h2>
           </Card.Title>
           <Card.Text>
-            <p className='available-jobs'>{available_jobs}</p>
+            {available_jobs}
           </Card.Text>
           <Button variant="primary">Apply Now</Button>
         </Card.Body>
