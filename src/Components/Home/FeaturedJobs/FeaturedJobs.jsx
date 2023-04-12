@@ -25,8 +25,10 @@ const FeaturedJobs = ({ eachFeaturedJob }) => {
           <h1>{company_name}</h1>
           <Card.Text>
             <h2 className='fw-bold'>{job_position}</h2>
-            <h5>{job_location}</h5>
-            {employment_type}, {job_type}, ${salary}
+            <div>
+              <button className='btn btn-primary'>{job_type}</button>   <button className='btn btn-primary'> {employment_type}</button>
+            </div>
+            {job_location},  ${salary}
           </Card.Text>
 
 
