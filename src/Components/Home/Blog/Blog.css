@@ -1,0 +1,12 @@
+.blog-page {
+  background: rgb(209, 209, 218);
+  margin-top: 100px;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.blog-page h2 {
+  color: darkblue;
+  font-size: 30px;
+  font-weight: bold;
+}
