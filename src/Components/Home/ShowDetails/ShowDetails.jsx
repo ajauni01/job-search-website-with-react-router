@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ShowDetails.css';
 import { useLoaderData } from 'react-router-dom';
 
 const ShowDetails = () => {
-  let data = useLoaderData();
-  console.log(data);
+  let [featuredJobs, setFeaturedJobs] = useState([]);
+
+  useEffect(() => {
+    let featuredJobLoader = async () => {
+      let loadJobs = await fetch('FeaturedJobs.json');
+      let newFeaturedJobs = await loadJobs.json();
+
+      // update the useState with the fetched featuredJobs
+      setFeaturedJobs(newFeaturedJobs);
+    }
+    featuredJobLoader();
+  }, [])
+  console.log(featuredJobs);
 
   return (
     <div>
       <h2>Show Details Page</h2>
 
-      {/* <h2>Show Details Page</h2>
-      <h3>{job.company_name}</h3>
-      <p>{job.job_position}</p> */}
-      {/* display other job details */}
+
     </div>
   );
 };

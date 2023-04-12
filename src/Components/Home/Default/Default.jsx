@@ -39,11 +39,11 @@ const Default = () => {
   }
 
   // function to handle show job details
-  // // function to handle show job details
-  // // function to handle show job details
-  // let showJobDetails = (eachFeaturedJob) => {
-  //   console.log(eachFeaturedJob);
-  // }
+  // function to handle show job details
+  let showJobDetails = (eachFeaturedJob) => (
+    <ShowDetails eachFeaturedJob={eachFeaturedJob}></ShowDetails>
+  );
+
 
   return (
     <div className='default-parent-container'>
@@ -93,7 +93,7 @@ const Default = () => {
 
           <div className='text-center'>
             {
-              featuredJobs.map(eachFeaturedJob => <FeaturedJobs eachFeaturedJob={eachFeaturedJob} key={eachFeaturedJob.id} ></FeaturedJobs>)
+              featuredJobs.map(eachFeaturedJob => <FeaturedJobs eachFeaturedJob={eachFeaturedJob} key={eachFeaturedJob.id} showJobDetails={showJobDetails} ></FeaturedJobs>)
             }
           </div>
           <button onClick={() => seeAll(true)} className='see-all'>See all</button>

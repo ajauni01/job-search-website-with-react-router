@@ -6,13 +6,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 const FeaturedJobs = ({ eachFeaturedJob }) => {
-  let { id, company_logo, company_name, employment_type, job_location, job_position, job_type, salary } = eachFeaturedJob;
+  let { Id, company_logo, company_name, employment_type, job_location, job_position, job_type, salary } = eachFeaturedJob;
 
-  let navigate = useNavigate();
-  let handleNavigate = (id) => {
-    console.log('Feature Page', id)
-    navigate(`/showDetails/${id}`)
-  }
+  // let navigate = useNavigate();
+  // let handleNavigate = (id) => {
+  //   console.log('Feature Page', id)
+  //   navigate(`/showDetails/${id}`)
+  // }
 
 
   return (
@@ -28,11 +28,10 @@ const FeaturedJobs = ({ eachFeaturedJob }) => {
           </Card.Text>
 
 
-          <Button
-            variant="primary"
-            onClick={() => handleNavigate(id)}>
+          <Link to={`/jobDetails/${Id}`}> <Button
+            variant="primary">
             Show Details
-          </Button>
+          </Button></Link>
 
         </Card.Body>
       </Card>
