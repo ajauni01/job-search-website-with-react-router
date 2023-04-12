@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "logo": "https://img.icons8.com/ios-glyphs/256/bank-account.png",
+    "title": "Account and Finance",
+    "available_jobs": "300 jobs available"
+  },
+  {
+    "id": 2,
+    "logo": "https://img.icons8.com/external-flatart-icons-outline-flatarticons/256/external-creative-design-graphic-designer-flatart-icons-outline-flatarticons.png",
+    "title": "Creative Design",
+    "available_jobs": "200 jobs available"
+  },
+  {
+    "id": 3,
+    "logo": "https://img.icons8.com/ios/256/sales-performance.png",
+    "title": "Marketing & Sales",
+    "available_jobs": "350 jobs available"
+  },
+  {
+    "id": 4,
+    "logo": "https://img.icons8.com/ios/256/permanent-job.png",
+    "title": "Engineering Job",
+    "available_jobs": "250 jobs available"
+  }
+]

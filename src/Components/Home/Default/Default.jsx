@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Default.css'
 import Container from 'react-bootstrap/Container';
 import img from '../../../../assets/All Images/P3OLGJ1 copy 1.png'
+import ShowJobCategory from '../ShowJobCategory/ShowJobCategory';
 
 const Default = () => {
+  let [jobCategory, setJobCategory] = useState([]);
+
+
+  useEffect(() => {
+    let loadAllJobCategories = async () => {
+      let loadCategories = await fetch('JobCategory.json');
+      let loadedCategoryData = await loadCategories.json();
+      setJobCategory(loadedCategoryData);
+    }
+    loadAllJobCategories();
+  }, [])
+
+
   return (
     <div className='default-parent-container'>
       <Container>
@@ -32,11 +46,20 @@ const Default = () => {
             <img src={img} alt="" />
           </div>
         </div>
+
+
         {/* body */}
         <div className='text-center'>
           <h1>Job Category List</h1>
           <p className='job-category-description'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
         </div>
+
+        <div>
+          {
+            jobCategory.map(eachJobCategory => <ShowJobCategory jobCategory={eachJobCategory} key={eachJobCategory.id}></ShowJobCategory>)
+          }
+        </div>
+
 
 
       </Container>

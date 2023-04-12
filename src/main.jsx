@@ -11,9 +11,8 @@ import {
 import Statistics from './Components/Home/Statistics/Statistics';
 import AppliedJobs from './Components/Home/AppliedJobs/AppliedJobs';
 import Home from './Components/Home/Home/Home';
-import Blog from './Components/Home/Blog/Blog';
 import Default from './Components/Home/Default/Default';
-import Body from './Components/Home/Body/Body';
+import Blog from './Components/Home/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -35,11 +34,8 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
-      },
-      {
-        path: "/",
-        element: <Body></Body>
       }
+
     ]
   }
 ])
