@@ -1,0 +1,7 @@
+.pie-chart {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1100px !important;
+}
