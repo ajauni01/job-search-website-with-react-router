@@ -1,0 +1,13 @@
+.text-center {
+  margin-top: 100px;
+}
+
+.text-center h1 {
+  color: #1A1919;
+  font-weight: 800;
+  font-size: 48px;
+}
+
+.text-center p {
+  color: #757575;
+}

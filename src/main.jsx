@@ -12,12 +12,18 @@ import Statistics from './Components/Home/Statistics/Statistics';
 import AppliedJobs from './Components/Home/AppliedJobs/AppliedJobs';
 import Home from './Components/Home/Home/Home';
 import Blog from './Components/Home/Blog/Blog';
+import Default from './Components/Home/Default/Default';
+import Body from './Components/Home/Body/Body';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
     children: [
+      {
+        path: "/",
+        element: <Default></Default>
+      },
       {
         path: "/statistics",
         element: <Statistics></Statistics>
@@ -29,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/",
+        element: <Body></Body>
       }
     ]
   }

@@ -8,8 +8,9 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-      <Body></Body>
       <Outlet></Outlet>
+
+
 
     </div>
   );

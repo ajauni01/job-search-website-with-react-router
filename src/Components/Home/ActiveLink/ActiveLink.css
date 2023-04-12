@@ -1,3 +1,10 @@
 .active {
   color: green;
+  font-size: 50px;
+}
+
+.notActive {
+  color: white;
+  font: bold;
+  font-size: 30px;
 }
