@@ -7,15 +7,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const FeaturedJobs = ({ eachFeaturedJob }) => {
   let { id, company_logo, company_name, employment_type, job_location, job_position, job_type, salary } = eachFeaturedJob;
-  console.log('clicked id', id);
-
-
-  // let navigate = useNavigate();
-  // let handleNavigate = (id) => {
-  //   console.log('Feature Page', id)
-  //   navigate(`/showDetails/${id}`)
-  // }
-
 
   return (
     <div className='d-inline-flex p-2 m-2 mx-auto'>
@@ -32,10 +23,10 @@ const FeaturedJobs = ({ eachFeaturedJob }) => {
           </Card.Text>
 
 
-          <Link to={`/jobDetails/${id}`}> <Button
-            variant="primary">
-            Show Details
-          </Button></Link>
+          <Link to={`/jobDetails/${id}`}>
+            <button className='btn btn-secondary'>Show Details</button>
+          </Link>
+
 
         </Card.Body>
       </Card>

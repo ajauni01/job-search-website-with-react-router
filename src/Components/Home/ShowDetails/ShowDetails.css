@@ -1,0 +1,31 @@
+.banner-container {
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+  margin-top: 0;
+  position: relative;
+}
+
+.banner-title {
+  margin-top: 100px !important;
+  position: absolute;
+  left: 650px;
+}
+
+.img-2 {
+  margin-top: 100px;
+}
+
+.job-specifications {
+  margin-top: 150px;
+}
+
+.applyNow-card {
+  margin-top: 150px;
+
+}
+
+.card-primary {
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.1) 0%, rgba(152, 115, 255, 0.1) 100%);
+  border-radius: 8px;
+  width: 20rem;
+  height: 400px !important;
+}

@@ -1,0 +1,29 @@
+.all-container {
+  margin-top: 150px;
+}
+
+.parent-div {
+  display: flex;
+  justify-content: space-between;
+  width: 1320px;
+  height: 300px;
+  margin-bottom: 5px;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+
+}
+
+.job-description {
+  padding: 60px;
+}
+
+.btn-details {
+  margin-right: 20px;
+  margin-top: 130px;
+}
+
+#dropdown-basic-button {
+  position: absolute;
+  top: 400px;
+  left: 1240px;
+}
