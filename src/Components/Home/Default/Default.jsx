@@ -38,7 +38,7 @@ const Default = () => {
     featuredJobs = featuredJobs.slice(0, 4);
   }
 
-  // function to handle show job details
+
   // function to handle show job details
   let showJobDetails = (eachFeaturedJob) => (
     <ShowDetails eachFeaturedJob={eachFeaturedJob}></ShowDetails>
